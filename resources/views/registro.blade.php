@@ -1,7 +1,6 @@
 @extends ('layout')
 
 @section ('navbar')
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between">
   <div class="d-flex align-items-center">
     <img src="https://i.ibb.co/XS0bQ31/pinguino.png" alt="penguin.png" width="8%" class="mr-2">
@@ -14,7 +13,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="/registro">Regístrate <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/">Inicia sesión <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Ayuda</a>
@@ -23,11 +22,9 @@
     </div>
   </div>
 </nav>
-
 @endsection ('navbar')
 
 @section ('content')
-
 <div class="row">
   <div class="col-4">
 
@@ -40,6 +37,10 @@
       <div class="card-body  align-items-center">
         <form>
           <div class="form-group">
+            <label for="exampleInputName1">Nombre</label>
+            <input type="name" class="form-control" id="exampleInputName1" aria-describedby="nameHelp">
+          </div>
+          <div class="form-group">
             <label for="exampleInputEmail1">Correo electrónico</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             <small id="emailHelp" class="form-text text-muted">nombre@ejemplo.com</small>
@@ -47,6 +48,10 @@
           <div class="form-group">
             <label for="exampleInputPassword1">Contraseña</label>
             <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword2">Confirmación de contraseña</label>
+            <input type="password" class="form-control" id="exampleInputPassword2">
           </div>
           <div class="form-group form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">

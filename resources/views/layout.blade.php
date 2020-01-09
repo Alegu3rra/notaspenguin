@@ -14,6 +14,8 @@
   <style>
   html, body {
     background-color: #fff;
+    background-image: url(https://i.ibb.co/tYD9nZG/background-penguin.png);
+     background-size: cover;
     color: #636b6f;
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
@@ -63,8 +65,10 @@
     margin-bottom: 30px;
   }
   </style>
+
 </head>
 <body>
+  @yield ('navbar')
   @yield ('content')
   <!-- optional javascripts -->
   <!-- bootstrap scripts -->
