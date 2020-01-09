@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    $name = request('name');
-    return view('welcome',[
-      'name' => $name
-  ]);
+Route::get('/', function(){
+  return view('Welcome');
 });
+
+
+// Route::get('/posts/{Tnotas}', 'PostsController@show');
+// Route::get('/posts/{post}', 'PostsController@show');
