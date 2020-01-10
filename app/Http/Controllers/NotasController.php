@@ -23,28 +23,7 @@ class NotasController extends Controller
   //     'notas'=>Notas::latest()->get()
   //   ]);
   // }
-
-  public function edit($Id)
-  {
-    $notas = Notas::find($Id)
-    return view('start.{id}.edit', compact('notas'));
-  }
-
-  public function updateAfterEdit()
-  {
-
-    $notas = Notas::find($id)
-
-    $notas->titulo = request('titulo');
-    $notas->cuerpo = request('cuerpo');
-
-    $notas->save();
-
-    return redirect('/start');
-  }
-
-
-  public function update()
+  public function newNota()
   {
     // dump(request()->all());
     $notas = new Notas();
@@ -54,8 +33,30 @@ class NotasController extends Controller
 
     $notas->save();
 
-    return redirect('/start', compact('notas'));
+    return redirect('/start');
   }
+  //
+  // public function edit($Id)
+  // {
+  //   $notas = Notas::find($Id)
+  //   return view('start.edit', compact('notas'));
+  // }
+
+  // public function updateAfterEdit()
+  // {
+  //
+  //   $notas = Notas::find($id)
+  //
+  //   $notas->titulo = request('titulo');
+  //   $notas->cuerpo = request('cuerpo');
+  //
+  //   $notas->save();
+  //
+  //   return redirect('/start');
+  // }
+
+
+
 
 
 }

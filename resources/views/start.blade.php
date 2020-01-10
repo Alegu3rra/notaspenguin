@@ -55,14 +55,16 @@
           <h5 class="card-title">{{$nota->titulo}}</h5>
           <p class="card-text">{{$nota->cuerpo}}</p>
           <!-- Button trigger modal -->
-          <a href="/start/{{$nota->id}}/edit">
-            <button action="" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-              Editar
-            </button>
-          </a>
+          <button action="" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal{{$nota->id}}">
+            Editar
+          </button>
+          <!-- Button trigger modal -->
+          <button action="" type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModa2{{$nota->id}}">
+            Borrar
+          </button>
 
           <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="exampleModal{{$nota->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -72,7 +74,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <form method="POST" action="/start">
+                  <form method="POST">
                     @csrf
                     @method('PUT')
                     <div class="form-group">
@@ -86,6 +88,24 @@
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModa2{{$nota->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">¿Estas seguro de borrar esta nota?</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
               </div>
             </div>

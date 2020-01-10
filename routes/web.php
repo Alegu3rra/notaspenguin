@@ -24,10 +24,10 @@ Route::get('/start', function(){
 Route::get('/registro', function(){
   return view('registro');
 });
+// Route::put('/start', 'NotasController@update');
+Route::post('/start', 'NotasController@newNota');
+// Route::get('/start/{Id}/edit', 'NotasController@edit');
 
-Route::post('/start', 'NotasController@update');
-Route::get('/start/{Id}/edit', 'NotasController@edit');
-Route::put('/start', 'NotasController@update');
 
 // Route::get('/posts/{Tnotas}', 'PostsController@show');
 // Route::get('/posts/{post}', 'PostsController@show');

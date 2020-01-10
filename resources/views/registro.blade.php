@@ -35,27 +35,19 @@
         <h4>Regístrate</h4>
       </div>
       <div class="card-body  align-items-center">
-        <form>
+        <form method="post" action="/start">
           <div class="form-group">
             <label for="exampleInputName1">Nombre</label>
-            <input type="name" class="form-control" id="exampleInputName1" aria-describedby="nameHelp">
+            <input type="name" class="form-control" id="exampleInputName1" name="name" aria-describedby="nameHelp">
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Correo electrónico</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
             <small id="emailHelp" class="form-text text-muted">nombre@ejemplo.com</small>
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword2">Confirmación de contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword2">
-          </div>
-          <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Recuérdame</label>
+            <input type="password" class="form-control" name="password" id="exampleInputPassword1">
           </div>
           <div class=" d-flex justify-content-center">
             <button type="submit" class="btn btn-primary">Entrar</button>
