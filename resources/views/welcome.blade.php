@@ -2,7 +2,7 @@
 
 @section ('navbar')
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-between">
   <div class="d-flex align-items-center">
     <img src="https://i.ibb.co/XS0bQ31/pinguino.png" alt="penguin.png" width="8%" class="mr-2">
     <a class="navbar-brand" href="/start">Notes</a>
@@ -34,8 +34,8 @@
   </div>
   <div class=" col-md-4 p-4">
     <div class="card">
-      <div class="card-header">
-        Inicia sesión
+      <div class="card-header text-center font-weight-bold">
+        <h4>Inicia sesión</h4>
       </div>
       <div class="card-body  align-items-center">
         <form>

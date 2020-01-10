@@ -15,13 +15,19 @@ Route::get('/', function(){
   return view('Welcome');
 });
 
+Route::get('/start', function(){
+  return view('start',[
+    'notas'=>App\Notas::latest()->get()
+  ]);
+});
+
 Route::get('/registro', function(){
   return view('registro');
 });
 
-Route::get('/start', function(){
-  return view('start');
-});
+Route::post('/start', 'NotasController@update');
+Route::get('/start/{Id}/edit', 'NotasController@edit');
+Route::put('/start', 'NotasController@update');
 
 // Route::get('/posts/{Tnotas}', 'PostsController@show');
 // Route::get('/posts/{post}', 'PostsController@show');
