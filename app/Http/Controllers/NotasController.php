@@ -26,6 +26,11 @@ class NotasController extends Controller
   public function newNota()
   {
     // dump(request()->all());
+    request()->validate([
+      'name'->'required',
+      'email'->'required',
+      'password'->'required'
+    ]);
     $notas = new Notas();
 
     $notas->titulo = request('titulo');

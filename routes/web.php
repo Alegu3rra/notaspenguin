@@ -26,6 +26,7 @@ Route::get('/registro', function(){
 });
 // Route::put('/start', 'NotasController@update');
 Route::post('/start', 'NotasController@newNota');
+Route::post('/registro', 'UsersController@newUser');
 // Route::get('/start/{Id}/edit', 'NotasController@edit');
 
 

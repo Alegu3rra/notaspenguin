@@ -68,7 +68,7 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <h5 class="modal-title" id="exampleModalLabel">Editar "{{$nota->titulo}}"</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -85,8 +85,8 @@
                       <label for="cuerpo">Nota</label>
                       <input type="text" class="form-control mb-3" name="cuerpo" id="cuerpo" placeholder="Escribe aqui" value="{{$nota->cuerpo}}">
                     </div>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-success">Editar</button>
                   </form>
                 </div>
               </div>
@@ -104,8 +104,8 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                  <button type="submit" class="btn btn-primary">Borrar</button>
                 </div>
               </div>
             </div>

@@ -35,7 +35,8 @@
         <h4>Regístrate</h4>
       </div>
       <div class="card-body  align-items-center">
-        <form method="post" action="/start">
+        <form method="post" action="/registro">
+          @csrf
           <div class="form-group">
             <label for="exampleInputName1">Nombre</label>
             <input type="name" class="form-control" id="exampleInputName1" name="name" aria-describedby="nameHelp">
