@@ -16,11 +16,11 @@ class UsersController extends Controller
   public function newUser()
   {
     // dump(request()->all());
-    request()->validate([
-      'name'->'required',
-      'email'->'required',
-      'password'->'required'
-    ]);
+    // request()->validate([
+    //   'name'->'required',
+    //   'email'->'required',
+    //   'password'->'required'
+    // ]);
     $user = new User();
 
     $user->name = request('name');
